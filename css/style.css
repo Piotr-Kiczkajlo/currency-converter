@@ -1,0 +1,19 @@
+html {
+    font-style: normal;
+    font-family: 'Arimo', sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 15px;
+    background-image: url(../img/2AMH012.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}

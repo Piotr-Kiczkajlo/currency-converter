@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+    <title>currency-converter</title>
+</head>
+
+<body>
+    <form class="form js-form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Przelicznik walut</legend>
+            <label class="form__text">Wprowadź kwotę w PLN:</label>
+            <span class="form__text"><input class="form__inputValue js-valuePL" type="number" min="1" step="any" required></span>
+            <label class="form__text">Wybierz walutę:</label>
+            <select class="form__valueOption js-valueOption">
+                <option value="usd" selected> USD</option>
+                <option value="gbp"> GBP</option>
+                <option value="eur"> EUR</option>
+             </select>
+            <label class="form__text"> Aktualne kursy:</label>
+            <p>USD <input class="form__field js-valueUSD" type="number" min="0.1" value="3.77" step="0.01"></p>
+            <p>GBP <input class="form__field js-valueGBP" type="number" min="0.1" value="5.27" step="0.01"></p>
+            <p>EUR <input class="form__field js-valueEUR" type="number" min="0.1" value="4.55" step="0.01"></p>
+            <span class="form__text">Otrzymujesz:</span><strong class="js-result">0</strong>
+            <button class="form__exchangeButton">Przelicz</button>
+            <button class="form__resetButton" type="reset">Wyczyść</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -16,7 +16,7 @@
                 return amoutPLN / rateEUR;
         }
     }
-    const formSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
 
         const amoutElement = document.querySelector(".js-valuePL");
@@ -27,7 +27,7 @@
 
         changeTextResult(result, valueOption);
     }
-    const formReset = () => {
+    const onFormReset = () => {
         const resultElement = document.querySelector(".js-result");
         resultElement.innerText = 0;
     }
@@ -36,9 +36,9 @@
         resultElement.innerText = `${result.toFixed(2)} ${valueOption}`;
     }
     const init = () => {
-        const formAction = document.querySelector(".js-form");
-        formAction.addEventListener("submit", formSubmit);
-        formAction.addEventListener("reset", formReset);
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", onFormSubmit);
+        formElement.addEventListener("reset", onFormReset);
     }
     init();
 }
